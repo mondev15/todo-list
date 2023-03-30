@@ -1,5 +1,9 @@
 # TodoList
 
+> To run the projet 
+$ npm start 
+$ json-server --watch db.json  (from mock_db folder)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
 ## Development server
