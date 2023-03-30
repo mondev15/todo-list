@@ -16,4 +16,13 @@ export class TaskListComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  public changeState(e: any, item: Task): void {
+    e.stopPropagation();
+
+    const state = e.target.checked;
+    this.taskListService.changeState(item, state).subscribe((res) => {
+      Object.assign(item, res);
+    });
+  }
 }
