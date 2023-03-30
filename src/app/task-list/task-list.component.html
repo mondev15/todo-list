@@ -1,5 +1,6 @@
 <div class="container">
   <h2 class="title"> Todo List</h2>
+  <button class="add-button" (click)="addTask()"> Add New Task </button>
 
   <div *ngIf="collection$  |async as collection" class="todo-list">
     <div class="task-number">{{collection.length}} Tasks</div>

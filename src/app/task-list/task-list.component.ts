@@ -25,4 +25,7 @@ export class TaskListComponent implements OnInit {
       Object.assign(item, res);
     });
   }
+  public addTask(): void {
+    this.taskListService.add(new Task()).subscribe((_res) => {});
+  }
 }
