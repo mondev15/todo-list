@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="title"> Todo List</h2>
+
+  <div *ngIf="collection$  |async as collection" class="todo-list">
+    <div class="task-number">{{collection.length}} Tasks</div>
+    <tr *ngFor="let item of  collection" [ngClass]="{completed: item.completed}" class="task">
+      <td>{{ item.title }}</td>
+      <td> ( {{ item.completed ? 'done' : 'undone'}} ) </td>
+    </tr>
+  </div>
